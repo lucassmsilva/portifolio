@@ -61,7 +61,7 @@ export default function Home() {
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-      <div className="w-full flex flex-col flex-1 px-2 lg:w-2/3">
+      <div className="w-full flex flex-col flex-1 px-2">
         <div className="h-screen w-full flex flex-col ">
           <div className="flex flex-col items-center mt-6">
             <Image
@@ -75,19 +75,26 @@ export default function Home() {
               ❝ A SIMPLICIDADE É O MAIS ALTO GRAU DE SOFISTICAÇÃO ❞
             </div>
             <small>Leonard Thiessen</small>
+            <p className="p-2 mt-6 text-center w-full md:w-1/2">
+              Experienced developer with skills in Laravel, Vue3, and React,
+              with a passion for creating simple and efficient solutions. I am
+              seeking opportunities to grow personally and contribute to
+              challenging projects while working as part of a team. I have
+              experience in ORACLE PL/SQL queries for custom reports and
+              filters.
+            </p>
           </div>
 
-          <div className="absolute bottom-20 w-full space-y-2">
-            <div className="w-full tracking-wider font-semibold">SKILLS</div>
-            <div className="w-full flex flex-row space-x-4 overflow-x-auto">
+          <div className="absolute m-auto left-0 right-0 bottom-5 flex md:justify-center space-y-2 px-2">
+            <div className="w-full flex flex-row md:w-[1060px] space-x-2 overflow-x-auto md:justify-center">
               {skills.map((skill) => (
                 <div className="flex flex-col" key={skill.name}>
                   <div className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center">
                     <Image
                       alt={skill.name}
                       src={skill.path}
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                     ></Image>
                   </div>
                   <span className="text-white text-center capitalize">
@@ -167,16 +174,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </Card>
-
-        <Card title="RESUME">
-          <p className="p-2">
-            Experienced developer with skills in Laravel, Vue3, and React, with
-            a passion for creating simple and efficient solutions. I am seeking
-            opportunities to grow personally and contribute to challenging
-            projects while working as part of a team. I have experience in
-            ORACLE PL/SQL queries for custom reports and filters.
-          </p>
         </Card>
       </div>
     </main>
