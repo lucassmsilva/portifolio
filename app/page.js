@@ -165,7 +165,7 @@ export default function Home() {
                   <FontAwesomeIcon className="w-8" icon={faGithub} />
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=556598469962"
+                  href="https://api.whatsapp.com/send?phone=5565984699962"
                   target="__blank"
                   className="bg-slate-400 px-4 py-2 rounded-lg flex items-center justify-center"
                 >
