@@ -40,19 +40,6 @@ export default function Home() {
       path: "/js.svg",
     },
   ];
-  const Card = ({ title, children }) => {
-    return (
-      <div className="flex flex-col  mt-4 bg-slate-800 shadow-md px-2 py-1 rounded-md">
-        <div className="w-full tracking-wide mb-4 py-2 font-bold shadow-md">
-          <span className="py-2 text-xl font-semibold tracking-wide">
-            {title}
-          </span>
-        </div>
-
-        <div className="w-full ">{children}</div>
-      </div>
-    );
-  };
   return (
     <main className="flex min-h-screen flex-col bg-slate-900 text-slate-100 lg:items-center overflow-auto">
       <div className="w-full h-16 bg-gradient-to-r  from-slate-800 to-indigo-950  flex flex-row justify-between items-center px-4 py-1 tracking-wide shadow-md shadow-slate-800">
@@ -61,7 +48,7 @@ export default function Home() {
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-      <div className="w-full flex flex-col flex-1 px-2">
+      <div className="w-full flex flex-col flex-1 px-2 ">
         <div className="h-screen w-full flex flex-col ">
           <div className="flex flex-col items-center mt-6">
             <Image
@@ -85,8 +72,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="m-auto left-0 right-0 bottom-5 flex md:justify-center space-y-2 px-2">
-            <div className="w-full flex flex-row md:w-[1060px] space-x-2 overflow-x-auto md:justify-center">
+          <div className="mt-6 flex md:justify-center space-y-2 px-2">
+            <div className="w-full flex flex-row md:w-[1060px] space-x-2 overflow-auto md:justify-center">
               {skills.map((skill) => (
                 <div className="flex flex-col" key={skill.name}>
                   <div className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center">
@@ -105,76 +92,60 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <Card title="CONTACT">
-          <div className="w-full flex flex-col lg:flex-row">
-            <div className="w-full flex flex-col">
-              <div className="w-[160px] h-[160px] rounded-full bg-slate-500 mb-4">
-                <Image
-                  className="rounded-full"
-                  alt="Profile Picture"
-                  src="/profile.jpg"
-                  width={160}
-                  height={160}
-                ></Image>
+        <div className="h-full w-full flex flex-col bg-indigo-900 text-2xl px-2 py-6 lg:items-center">
+          <div className="w-full flex flex-col lg:w-1/2">
+            <span className="text-3xl font-semibold">CONTATO</span>
+            <div className="w-full space-y-2 mt-6">
+              <div className="w-full flex flex-row items-center space-x-2">
+                <FontAwesomeIcon className="w-8 lg:w-12" icon={faUser} />
+                <span>Lucas dos Santos Marques da Silva</span>
               </div>
-              <div className="w-full text-lg font-semibold tracking-wider my-2">
-                FULLSTACK DEVELOPER
+              <div className="w-full flex flex-row items-center space-x-2">
+                <FontAwesomeIcon className="w-8 lg:w-12" icon={faEnvelope} />
+                <span>luca.stos@hotmail.com</span>
+              </div>
+              <div className="w-full flex flex-row items-center space-x-2">
+                <FontAwesomeIcon className="w-8 lg:w-12" icon={faWhatsapp} />
+                <span>(65) 98469-9962</span>
+              </div>
+              <div className="w-full flex flex-row items-center space-x-2">
+                <FontAwesomeIcon className="w-8 lg:w-12" icon={faLinkedin} />
+                <span>/lucassmsilva</span>
               </div>
             </div>
-            <div className="w-full flex flex-col">
-              <div className="w-full space-y-1">
-                <div className="w-full flex flex-row space-x-2">
-                  <FontAwesomeIcon className="w-4" icon={faUser} />
-                  <span>Lucas dos Santos Marques da Silva</span>
-                </div>
-                <div className="w-full flex flex-row space-x-2">
-                  <FontAwesomeIcon className="w-4" icon={faEnvelope} />
-                  <span>luca.stos@hotmail.com</span>
-                </div>
-                <div className="w-full flex flex-row space-x-2">
-                  <FontAwesomeIcon className="w-4" icon={faWhatsapp} />
-                  <span>(65) 98469-9962</span>
-                </div>
-                <div className="w-full flex flex-row space-x-2">
-                  <FontAwesomeIcon className="w-4" icon={faLinkedin} />
-                  <span>/lucassmsilva</span>
-                </div>
-              </div>
 
-              <div className="w-full flex flex-row justify-between mt-4 mb-2 text-slate-900 lg:max-w-[300px]">
-                <a
-                  href="mailto:luca.stos@hotmail.com"
-                  target="__blank"
-                  className="bg-slate-400 px-4 py-2 rounded-lg flex items-center justify-center"
-                >
-                  <FontAwesomeIcon className="w-8" icon={faEnvelope} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/lucassmsilva/"
-                  target="__blank"
-                  className="bg-slate-400 px-4 py-2 rounded-lg flex items-center justify-center"
-                >
-                  <FontAwesomeIcon className="w-8" icon={faLinkedin} />
-                </a>
-                <a
-                  href="https://github.com/lucassmsilva"
-                  target="__blank"
-                  className="bg-slate-400 px-4 py-2 rounded-lg flex items-center justify-center"
-                >
-                  <FontAwesomeIcon className="w-8" icon={faGithub} />
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5565984699962"
-                  target="__blank"
-                  className="bg-slate-400 px-4 py-2 rounded-lg flex items-center justify-center"
-                >
-                  <FontAwesomeIcon className="w-8" icon={faWhatsapp} />
-                </a>
-              </div>
+            <div className="w-full flex flex-row justify-between mt-4 mb-2 text-slate-900 lg:max-w-[500px] space-x-4 overflow-hidden">
+              <a
+                href="https://api.whatsapp.com/send?phone=5565984699962"
+                target="__blank"
+                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+              >
+                <FontAwesomeIcon className="w-10 lg:w-16" icon={faWhatsapp} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lucassmsilva/"
+                target="__blank"
+                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+              >
+                <FontAwesomeIcon className="w-10 lg:w-16" icon={faLinkedin} />
+              </a>
+              <a
+                href="https://github.com/lucassmsilva"
+                target="__blank"
+                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+              >
+                <FontAwesomeIcon className="w-10 lg:w-16" icon={faGithub} />
+              </a>
+              <a
+                href="mailto:luca.stos@hotmail.com"
+                target="__blank"
+                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+              >
+                <FontAwesomeIcon className="w-10 lg:w-16" icon={faEnvelope} />
+              </a>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </main>
   );
