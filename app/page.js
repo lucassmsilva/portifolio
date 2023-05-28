@@ -81,11 +81,8 @@ export default function Home() {
             <div className="w-full tracking-wider font-semibold">SKILLS</div>
             <div className="w-full flex flex-row space-x-4 overflow-x-auto">
               {skills.map((skill) => (
-                <div className="flex flex-col">
-                  <div
-                    key={skill.name}
-                    className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center"
-                  >
+                <div className="flex flex-col" key={skill.name}>
+                  <div className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center">
                     <Image
                       alt={skill.name}
                       src={skill.path}
