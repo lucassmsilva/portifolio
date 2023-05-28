@@ -14,6 +14,32 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
+  const skills = [
+    {
+      name: "Laravel",
+      path: "/laravel.svg",
+    },
+    {
+      name: "Vue",
+      path: "/vue.svg",
+    },
+    {
+      name: "React",
+      path: "/react.svg",
+    },
+    {
+      name: "oracle",
+      path: "/oracle.svg",
+    },
+    {
+      name: "php",
+      path: "/php.svg",
+    },
+    {
+      name: "js",
+      path: "/js.svg",
+    },
+  ];
   const Card = ({ title, children }) => {
     return (
       <div className="flex flex-col  mt-4 bg-slate-800 shadow-md px-2 py-1 rounded-md">
@@ -28,7 +54,7 @@ export default function Home() {
     );
   };
   return (
-    <main className="flex min-h-screen flex-col bg-slate-900 text-slate-100 lg:items-center">
+    <main className="flex min-h-screen flex-col bg-slate-900 text-slate-100 lg:items-center overflow-auto">
       <div className="w-full h-16 bg-gradient-to-r  from-slate-800 to-indigo-950  flex flex-row justify-between items-center px-4 py-1 tracking-wide shadow-md shadow-slate-800">
         <div className="font-bold tracking-wide">/LUCASSMSILVA</div>
         <div className="w-4 text-slate-200">
@@ -36,6 +62,46 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full flex flex-col flex-1 px-2 lg:w-2/3">
+        <div className="h-screen w-full flex flex-col ">
+          <div className="flex flex-col items-center mt-6">
+            <Image
+              className="rounded-full mt-6"
+              alt="Profile Picture"
+              src="/profile.jpg"
+              width={240}
+              height={240}
+            ></Image>
+            <div className="text-center text-transparent text-2xl font-bold mt-4  bg-clip-text bg-gradient-to-r from-slate-300 to-purple-500">
+              ❝ A SIMPLICIDADE É O MAIS ALTO GRAU DE SOFISTICAÇÃO ❞
+            </div>
+            <small>Leonard Thiessen</small>
+          </div>
+
+          <div className="absolute bottom-20 w-full space-y-2">
+            <div className="w-full tracking-wider font-semibold">SKILLS</div>
+            <div className="w-full flex flex-row space-x-4 overflow-x-auto">
+              {skills.map((skill) => (
+                <div className="flex flex-col">
+                  <div
+                    key={skill.name}
+                    className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center"
+                  >
+                    <Image
+                      alt={skill.name}
+                      src={skill.path}
+                      width={100}
+                      height={100}
+                    ></Image>
+                  </div>
+                  <span className="text-white text-center capitalize">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <Card title="CONTACT">
           <div className="w-full flex flex-col lg:flex-row">
             <div className="w-full flex flex-col">
