@@ -85,7 +85,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="absolute m-auto left-0 right-0 bottom-5 flex md:justify-center space-y-2 px-2">
+          <div className="m-auto left-0 right-0 bottom-5 flex md:justify-center space-y-2 px-2">
             <div className="w-full flex flex-row md:w-[1060px] space-x-2 overflow-x-auto md:justify-center">
               {skills.map((skill) => (
                 <div className="flex flex-col" key={skill.name}>
