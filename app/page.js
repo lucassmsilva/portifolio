@@ -59,9 +59,9 @@ export default function Home() {
               height={240}
             ></Image>
             <div className="text-center text-transparent text-2xl font-bold mt-4  bg-clip-text bg-gradient-to-r from-slate-300 to-purple-500">
-              ❝ A SIMPLICIDADE É O MAIS ALTO GRAU DE SOFISTICAÇÃO ❞
+              ❝ Simplicity is the ultimate sophistication ❞
             </div>
-            <small>Leonard Thiessen</small>
+            <small>(Leonardo Da Vinci)</small>
             <p className="p-2 mt-6 text-center w-full md:w-1/2">
               Experienced developer with skills in Laravel, Vue3, and React,
               with a passion for creating simple and efficient solutions. I am
