@@ -128,8 +128,8 @@ export default function Home() {
                 </div>
 
                 <p className="text-lg text-slate-200">
-                  On Web Design, I'm stil learning a lot of new stuff, specially
-                  on UI/UX. Backend is where i'm strongest.
+                  On Web Design, I m stil learning a lot of new stuff, specially
+                  on UI/UX. Backend is where i m strongest.
                 </p>
               </div>
             </div>
