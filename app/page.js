@@ -48,11 +48,11 @@ export default function Home() {
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-      <div className="w-full flex flex-col flex-1 px-2 ">
-        <div className="h-screen w-full flex flex-col ">
+      <div className="w-full flex flex-col flex-1 px-2">
+        <div className="h-screen w-full flex flex-col bg-gradient-to-b from-slate-900 to-indigo-900 lg:justify-center justify-end pb-4 ">
           <div className="flex flex-col items-center mt-6">
             <Image
-              className="rounded-full mt-6"
+              className="rounded-full mt-6 shadow-lg shadow-sky-600 "
               alt="Profile Picture"
               src="/profile.jpg"
               width={240}
@@ -76,7 +76,7 @@ export default function Home() {
             <div className="w-full flex flex-row md:w-[1060px] space-x-2 overflow-auto md:justify-center">
               {skills.map((skill) => (
                 <div className="flex flex-col" key={skill.name}>
-                  <div className="w-[120px] h-[120px] rounded-lg shadow-md bg-slate-600 flex flex-col items-center justify-center">
+                  <div className="w-[120px] h-[120px] rounded-lg shadow-md bg-gradient-to-r from-slate-600 to-slate-800 flex flex-col items-center justify-center">
                     <Image
                       alt={skill.name}
                       src={skill.path}
@@ -84,7 +84,7 @@ export default function Home() {
                       height={80}
                     ></Image>
                   </div>
-                  <span className="text-white text-center capitalize">
+                  <span className="text-white font-medium text-center capitalize">
                     {skill.name}
                   </span>
                 </div>
@@ -92,8 +92,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-full w-full flex flex-col bg-indigo-900 text-2xl px-2 py-6 lg:items-center">
-          <div className="w-full flex flex-col lg:w-1/2">
+        <div className="h-full w-full flex flex-col  bg-wave bg-left text-2xl px-2 py-6 lg:items-center justify-end">
+          <div className="w-full flex flex-col lg:w-1/2 mb-4">
             <span className="text-3xl font-semibold">CONTATO</span>
             <div className="w-full space-y-2 mt-6">
               <div className="w-full flex flex-row items-center space-x-2">
@@ -118,28 +118,28 @@ export default function Home() {
               <a
                 href="https://api.whatsapp.com/send?phone=5565984699962"
                 target="__blank"
-                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+                className="shadow-lg bg-gradient-to-r from-slate-600 to-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center"
               >
                 <FontAwesomeIcon className="w-10 lg:w-16" icon={faWhatsapp} />
               </a>
               <a
                 href="https://www.linkedin.com/in/lucassmsilva/"
                 target="__blank"
-                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+                className="shadow-lg bg-gradient-to-r from-slate-600 to-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center"
               >
                 <FontAwesomeIcon className="w-10 lg:w-16" icon={faLinkedin} />
               </a>
               <a
                 href="https://github.com/lucassmsilva"
                 target="__blank"
-                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+                className="shadow-lg bg-gradient-to-r from-slate-600 to-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center"
               >
                 <FontAwesomeIcon className="w-10 lg:w-16" icon={faGithub} />
               </a>
               <a
                 href="mailto:luca.stos@hotmail.com"
                 target="__blank"
-                className="bg-sky-900 text-white px-4 py-2 rounded-lg flex items-center justify-center"
+                className="shadow-lg bg-gradient-to-r from-slate-600 to-slate-700 text-white px-4 py-2 rounded-lg flex items-center justify-center"
               >
                 <FontAwesomeIcon className="w-10 lg:w-16" icon={faEnvelope} />
               </a>
