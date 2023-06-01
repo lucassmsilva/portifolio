@@ -2,9 +2,11 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faPhone,
   faEnvelope,
   faUser,
+  faMobileScreen,
+  faDisplay,
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -89,6 +91,47 @@ export default function Home() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-screen flex flex-col bg-slate-700 px-2">
+          <h3 className="font-bold w-full text-2xl text-center py-6  ">
+            What I like (really like) to do
+          </h3>
+
+          <div className="w-full h-full flex flex-col justify-center items-center">
+            <div className="w-full h-full grid lg:grid-cols-3 gap-4 py-6">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+                <div className="w-20 mx-2">
+                  <FontAwesomeIcon icon={faBrain} />
+                </div>
+
+                <p className="text-lg text-slate-200">
+                  The pursuit for efficiency. I can compromise in a good
+                  solution, but i like to try new ideas and use creativy.
+                </p>
+              </div>
+
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+                <div className="w-20 mx-2">
+                  <FontAwesomeIcon icon={faMobileScreen} />
+                </div>
+
+                <p className="text-lg text-slate-200">
+                  Creation of apps in react native. For me, its a bit of a
+                  stress reliver. I dont even see the time pass.
+                </p>
+              </div>
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+                <div className="w-20 mx-2">
+                  <FontAwesomeIcon icon={faDisplay} />
+                </div>
+
+                <p className="text-lg text-slate-200">
+                  On Web Design, I'm stil learning a lot of new stuff, specially
+                  on UI/UX. Backend is where i'm strongest.
+                </p>
+              </div>
             </div>
           </div>
         </div>
