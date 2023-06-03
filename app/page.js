@@ -95,13 +95,13 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-screen flex flex-col bg-slate-700 px-2">
-          <h3 className="font-bold w-full text-2xl text-center py-6  ">
+          <h3 className="font-bold w-full text-2xl lg:text-4xl text-center py-6 items-center justify-center ">
             What I like (really like) to do
           </h3>
 
           <div className="w-full h-full flex flex-col justify-center items-center">
-            <div className="w-full h-full grid lg:grid-cols-3 gap-4 py-6">
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+            <div className="w-full h-full grid lg:items-center  justify-center lg:grid-cols-3 gap-4 py-6">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faBrain} />
                 </div>
@@ -112,7 +112,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faMobileScreen} />
                 </div>
@@ -122,7 +122,7 @@ export default function Home() {
                   stress reliver. I dont even see the time pass.
                 </p>
               </div>
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faDisplay} />
                 </div>
