@@ -43,15 +43,9 @@ export default function Home() {
     },
   ];
   return (
-    <main className="flex min-h-screen flex-col bg-slate-900 text-slate-100 lg:items-center overflow-auto">
-      <div className="w-full h-16 bg-gradient-to-r  from-slate-800 to-indigo-950  flex flex-row justify-between items-center px-4 py-1 tracking-wide shadow-md shadow-slate-800">
-        <div className="font-bold tracking-wide">/LUCASSMSILVA</div>
-        <div className="w-4 text-slate-200">
-          <FontAwesomeIcon icon={faBars} />
-        </div>
-      </div>
+    <main className="flex flex-col bg-slate-900 text-slate-100 lg:items-center overflow-auto">
       <div className="w-full flex flex-col flex-1 px-2">
-        <div className="h-screen w-full flex flex-col bg-gradient-to-b from-slate-900 to-indigo-900 lg:justify-center justify-end pb-4 ">
+        <div className="h-screen w-full flex flex-col  lg:justify-center justify-end pb-4 ">
           <div className="flex flex-col items-center mt-6">
             <Image
               className="rounded-full mt-6 shadow-lg shadow-sky-600 "
@@ -101,7 +95,7 @@ export default function Home() {
 
           <div className="w-full h-full flex flex-col justify-center items-center">
             <div className="w-full h-full grid lg:items-center  justify-center lg:grid-cols-3 gap-4 py-6">
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg  rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faBrain} />
                 </div>
@@ -112,7 +106,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg  rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faMobileScreen} />
                 </div>
@@ -122,7 +116,7 @@ export default function Home() {
                   stress reliver. I dont even see the time pass.
                 </p>
               </div>
-              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg shadow-indigo-800 rounded-lg text-slate-300 flex-row text-center items-center justify-center">
+              <div className="w-full lg:h-[50%] flex flex-1 p-2 bg-slate-800 shadow-lg  rounded-lg text-slate-300 flex-row text-center items-center justify-center">
                 <div className="w-20 mx-2">
                   <FontAwesomeIcon icon={faDisplay} />
                 </div>
