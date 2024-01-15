@@ -37,15 +37,18 @@ import {
             </li>
         </ul>
     </nav>
-    <main class="flex flex-1 flex-col">
-      <div class="w-full h-full flex justify-center">        
+    <main class="flex flex-1 flex-col px-2">
+      <div class="w-full h-full flex xl:justify-center">        
         <div class="w-full flex flex-col">
           <section class="pb-4">
             <div class="w-full flex items-center justify-center pt-8 ">
-              <span>
+              <span class="hidden xl:block">
                 <svg width="128px" height="128px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.275 44.508h-20.55V17.492h6.063v23.799h14.488v5.217z" fill="#000000"></path></svg>
               </span>
-              <span class="text-8xl font-bold text-gray-900">
+              <span class="xl:hidden">
+                <svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.275 44.508h-20.55V17.492h6.063v23.799h14.488v5.217z" fill="#000000"></path></svg>
+              </span>
+              <span class="text-4xl xl:text-8xl font-bold text-gray-900">
                 ucas Silva
               </span>
             </div>
@@ -70,23 +73,23 @@ import {
                 </span>
               </label>
 
-              <ul class="font-mono flex gap-4 pb-2">
-                <li class="px-2 py-1 bg-gray-200 rounded-md">C#</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">PHP</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">JAVASCRIPT</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">ORACLE PL/SQL</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">GIT</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">PYTHON</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">HTML</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">CSS</li>
+              <ul class="font-mono flex w-full flex-wrap gap-4 pb-2">
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">C#</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">PHP</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">JAVASCRIPT</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">ORACLE PL/SQL</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">GIT</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">PYTHON</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">HTML</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">CSS</li>
               </ul>
 
               <ul class="font-mono flex gap-4">
-                <li class="px-2 py-1 bg-gray-200 rounded-md">VUE JS</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">.NET </li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">LARAVEL</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">REACT</li>
-                <li class="px-2 py-1 bg-gray-200 rounded-md">REACT NATIVE</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">VUE JS</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">.NET </li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">LARAVEL</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">REACT</li>
+                <li class="px-2 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">REACT NATIVE</li>
 
               </ul>
               
