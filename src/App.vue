@@ -88,7 +88,7 @@ onMounted(() => {
           </section>
 
 
-          <div class="flex flex-row">
+          <div class="flex flex-col-reverse items-center lg:flex-row ">
             <section class="flex flex-col gap-8 pt-10">
               <div class="border-l-2 border-accent w-full px-2">
                 <span class="text-xl">
