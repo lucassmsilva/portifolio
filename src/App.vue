@@ -10,6 +10,7 @@ import {
   YoutubeFilled,
   CodeFilled
   } from '@ant-design/icons-vue';
+import DarkModeButton from "./components/DarkModeButton.vue";
 
 const animmatedText = ref('');
 const textos = ref(['Fullstack Developer', 'passionate about coding']);
@@ -45,8 +46,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-screen w-screen flex flex-col items-center dark:bg-gray-800 dark:background  dark:text-white" >
-    <nav class="h-16 bg-gray-900 w-full" >
+  <div class="h-screen w-screen flex flex-col items-center dark:bg-gray-800  background dark:text-white" >
+    <nav class="h-16 bg-gray-200 dark:bg-gray-900 w-full" >
         <ul class="w-full flex items-center justify-end gap-4 p-4 font-semibold">
           <li>
                 <a target="__blank"  class="text-xl" href="/projects" >Projects</a>
@@ -67,20 +68,24 @@ onMounted(() => {
                   <LinkedinFilled />
                 </a>
             </li>
+
+          <li>
+            <DarkModeButton />
+          </li>
         </ul>
     </nav>
-    <main class="flex flex-1 flex-col px-2">
-      <div class="w-full h-full flex xl:justify-center">        
+    <main class="flex flex-1 flex-col px-4 lg:px-10 ">
+      <div class="w-full h-full flex xl:justify-center">
         <div class="w-full flex flex-col">
           <section class="pb-4">
             <div class="w-full flex items-center justify-center pt-8 ">
-              <span class="hidden xl:block hover:bg-accent dark:bg-gray-100  rounded-full">
+              <span class="hidden xl:block hover:bg-accent dark:bg-gray-100 dark:hover:bg-accent rounded-full">
                 <svg width="128px" height="128px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.275 44.508h-20.55V17.492h6.063v23.799h14.488v5.217z" fill="#000000"></path></svg>
               </span>
               <span class="xl:hidden">
                 <svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.275 44.508h-20.55V17.492h6.063v23.799h14.488v5.217z" fill="#000000"></path></svg>
               </span>
-              <span class="text-4xl xl:text-8xl font-bold text-gray-100">
+              <span class="text-4xl xl:text-8xl font-bold dark:text-gray-100 text-gray-900">
                 ucas Silva
               </span>
             </div>
@@ -88,13 +93,16 @@ onMounted(() => {
           </section>
 
 
-          <div class="flex flex-col-reverse items-center lg:flex-row ">
-            <section class="flex flex-col gap-8 pt-10">
+          <div class="flex flex-col-reverse items-center lg:flex-row">
+            <section class="flex flex-col gap-8 pt-10 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md p-4">
               <div class="border-l-2 border-accent w-full px-2">
                 <span class="text-xl">
                   <strong>I am </strong>
+
                   <em>
+                  <code >
                     {{ animmatedText }}
+                  </code>
                   </em>
               </span>
               </div>
@@ -107,7 +115,7 @@ onMounted(() => {
                   </span>
                 </label>
 
-                <ul class="font-mono flex w-full flex-wrap gap-4 pb-2">
+                <ul class="font-mono flex w-full flex-wrap gap-4 pb-2 rounded-md">
                   <li class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">C#</li>
                   <li class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">PHP</li>
                   <li class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-md hover:bg-gray-500 hover:font-bold hover:text-gray-100">JAVASCRIPT</li>
@@ -149,7 +157,7 @@ onMounted(() => {
               </div>
             </section>
 
-            <img src="./assets/man_coding.svg" alt="A man coding" class="w-1/2">
+            <img src="./assets/man_coding.svg" alt="A man coding" class=" w-full md:w-1/2">
           </div>
 
 
@@ -173,11 +181,20 @@ onMounted(() => {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 
+/*
 .background {
-  background-image: url("./assets/background.jpg");
+  background-image: url("assets/light-background.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.dark .background {
+  background-image: url("./assets/dark-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+
 
 img {
   filter: grayscale(1);
