@@ -1,9 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    :root {
-        --accent-color: #61c7c9
-    }
+:root {
+    --ff: "Montserrat", sans-serif;
+    --h1: bold 1.125rem/1.4em var(--ff);
+    --h2: bold 1rem/1.4em var(--ff);
+    --p: 1rem/1.4em var(--ff);
+    --p2: 0.875rem/1.4em var(--ff);
+
+
+    --gray100: hsl(0, 0%, 100%);
+    --gray85: hsl(0, 0%, 85%);
+    --gray70: hsl(0, 0%, 70%);
+    --gray60: hsl(0, 0%, 60%);
+    --gray40: hsl(0, 0%, 40%);
+    --gray0: hsl(0, 0%, 0%);
+    --shadow: 0px 4px 4px #00000030, 0px 12px 12px #00000015;
+
+    --color-secondary: hsl(0, 50%, 10%);
+    --color-tertiary: hsl(60, 80%, 20%);
+    --color-accent: hsl(300, 80%, 20%);
+    --colorgray: hsl(0, 0%, 60%);
+    --graygradient: linear-gradient(45deg, hsl(0, 0%, 20%), hsl(0, 0%, 15%));
+}
+
+.title {
+    font: var(--h2);
+}
+
+.subtitle {
+    font: var(--h2);
+}
+
+.paragraph {
+    font: var(--p);
+}
+
+.secondary {
+    font: var(--p2);
+}
+
+.dark {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 90%);
+    --color-tertiary: hsl(60, 80%, 80%);
+    --color-accent: hsl(300, 80%, 80%);
+}
+
+.nav-active {
+    color: var(--gray0);
+    font: var(--h2);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.decoration-none {
+    text-decoration: none;
+    color: var(--gray0);
+    font: var(--p);
 }
