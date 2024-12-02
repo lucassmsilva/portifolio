@@ -3,12 +3,10 @@
 import {
     GithubFilled,
 } from '@ant-design/icons-vue';
-
-
 </script>
 
 <template>
-    <div style="margin: 0 auto; max-width: 1200px;">
+    <div class="overflow-auto py-4" style="margin: 0 auto; max-width: 1200px;">
         <h4 class="title">Meus Projetos</h4>
         <div class="w-full flex flex-col gap-4">
             <div class="card w-full">

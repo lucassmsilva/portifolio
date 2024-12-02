@@ -1,14 +1,6 @@
 <script setup>
-
-import {
-    GithubFilled,
-    LinkedinFilled,
-    MailFilled,
-    WhatsAppOutlined,
-} from '@ant-design/icons-vue';
-
+import Contact from '../components/Contact.vue';
 </script>
-
 <template>
     <div style="margin: 0 auto; max-width: 1200px;">
         <div class="flex flex-col gap-4 ">
@@ -55,32 +47,8 @@ import {
                 </div>
             </div>
 
-            <ul class="w-full flex flex-col gap-4">
-                <li>
-                    <a target="__blank" class="md:text-lg" href="https://github.com/lucassmsilva">
-                        <GithubFilled /> github.com/lucassmsilva
-                    </a>
-                </li>
+            <Contact></Contact>
 
-                <li>
-                    <a target="__blank" class="md:text-lg" href="https://www.linkedin.com/in/lucassmsilva">
-                        <LinkedinFilled /> www.linkedin.com/in/lucassmsilva
-                    </a>
-                </li>
-
-                <li>
-                    <a target="__blank" class="md:text-lg" href="mailto:lucassmsilvadev@gmail.com">
-                        <MailFilled /> lucassmsilvadev@gmail.com
-                    </a>
-                </li>
-
-                <li>
-                    <a target="__blank" class="md:text-lg decoration-none flex items-center"
-                        href="https://api.whatsapp.com/send?phone=5565984699962&text=Ol%C3%A1%20encontrei%20seu%20site%20e%20gostaria%20de%20entrar%20em%20contato">
-                        <WhatsAppOutlined /> (65) 98469-9962
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
 </template>

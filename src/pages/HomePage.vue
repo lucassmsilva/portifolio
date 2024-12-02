@@ -1,4 +1,5 @@
 <script setup>
+import Contact from '../components/Contact.vue';
 import { onMounted, ref } from 'vue';
 
 import {
@@ -39,7 +40,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex">
+    <div class="md:flex">
         <div class="md:w-3/5 md:pt-20 flex-col md:flex-1 px-4 pl-8 md:pl-20">
 
             <div class="" style="font: 2.5rem/1.4em var(--ff);">
@@ -66,10 +67,15 @@ onMounted(() => {
             <div class="flex flex-col gap-2">
                 <img src="../assets/eu.webp" alt="Eu mesmo" class="imagem-responsiva">
                 <code>
-      I'm a {{ animmatedText }}
-    </code>
+                    I'm a {{ animmatedText }}
+                    </code>
             </div>
         </div>
+    </div>
+
+    <div class="px-8 mt-8 md:hidden">
+
+        <Contact></Contact>
     </div>
 </template>
 
