@@ -48,7 +48,7 @@ const navActiveStyle = "nav-active";
         </li>
       </ul>
     </nav>
-    <main class="w-full md:flex h-full gap-2 ">
+    <main class="w-full h-full ">
       <RouterView />
     </main>
   </div>
