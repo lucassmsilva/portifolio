@@ -1,0 +1,184 @@
+---
+title: 'Next hydration error MUI || ANTD'
+excerpt: 'Um erro comum na hora de iniciar projetos'
+date: '2025-01-26'
+coverImage: '/images/next.svg'
+---
+
+## Common error
+
+This day's ago i suffer with it in both projects, being using ANTD or trying to use Material UI, the next hydration error when using the components from the above libraries, so i will share the fix that i got.
+
+## The error
+
+```
+Unhandled Runtime Error
+Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used
+- A server/client branch if (typeof window !== 'undefined'). - Variable input such as Date.now() or Math.random() which changes each time it's called. - Date formatting in a user's locale which doesn't match the server. - External changing data without sending a snapshot of it along with the HTML. - Invalid HTML tag nesting. It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+See more info here: https://nextjs.org/docs/messages/react-hydration-error
+
+
+Copy
+ ...
+  ...
++  <div className="MuiContainer-root MuiContainer-maxWidthLg css-5c1adp-MuiContainer-root">
+-  <style data-emotion="css-global o6gwfi" data-s="">
+```
+
+## Solution
+
+If you are using MUI
+
+create an mui-provider.tsx like this
+
+```
+// components/ui/mui-provider.tsx
+"use client";
+
+import createCache from "@emotion/cache";
+import { useServerInsertedHTML } from "next/navigation";
+import { CacheProvider } from "@emotion/react";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme } from "@mui/material/styles";
+import { useState } from "react";
+import Navbar from "../shared/navbar";
+import { Container } from "@mui/material";
+
+const theme = createTheme({
+  // suas configurações de tema
+});
+
+export default function MUIProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [{ cache, flush }] = useState(() => {
+    const cache = createCache({
+      key: "mui",
+      prepend: true,
+    });
+
+    cache.compat = true;
+    const prevInsert = cache.insert;
+    let inserted: string[] = [];
+    cache.insert = (...args) => {
+      const serialized = args[1];
+      if (cache.inserted[serialized.name] === undefined) {
+        inserted.push(serialized.name);
+      }
+      return prevInsert(...args);
+    };
+
+    const flush = () => {
+      const prevInserted = inserted;
+      inserted = [];
+      return prevInserted;
+    };
+
+    return { cache, flush };
+  });
+
+  useServerInsertedHTML(() => {
+    const names = flush();
+    if (names.length === 0) {
+      return null;
+    }
+
+    let styles = "";
+    for (const name of names) {
+      styles += cache.inserted[name];
+    }
+
+    return (
+      <style
+        data-emotion={`${cache.key} ${names.join(" ")}`}
+        dangerouslySetInnerHTML={{
+          __html: styles,
+        }}
+      />
+    );
+  });
+
+  return (
+    <CacheProvider value={cache}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="lg" disableGutters>
+          {children}
+        </Container>
+      </ThemeProvider>
+    </CacheProvider>
+  );
+}
+
+```
+
+If you are using ANTD
+
+you can do like this
+
+layout.tsx
+```
+    import { AntdRegistry } from "@ant-design/nextjs-registry";
+    
+
+    // ... rest of code
+
+
+      <body className={`${interFont.variable} antialiased`}>
+        <AntdRegistry>
+          <ClientLayout>{children}</ClientLayout>
+        </AntdRegistry>
+      </body>
+```
+
+client example
+```
+// components/layouts/client-layout.tsx
+"use client";
+
+import SideMenu from "@/components/ui/sidemenu";
+import { Layout } from "antd";
+import "@ant-design/v5-patch-for-react-19";
+import { AppProvider } from "../providers/app-provider";
+
+const { Sider, Content } = Layout;
+
+// components/layouts/client-layout.tsx
+export default function ClientLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <AppProvider>
+      <Layout
+        style={{ minHeight: "100vh" }}
+        className="overflow-x-hidden" // Previne rolagem horizontal
+      >
+        <Sider
+          width={256}
+          collapsible
+          theme="light"
+        >
+          <SideMenu />
+        </Sider>
+
+        <Layout>
+          <Content
+            style={{
+              padding: "24px",
+              minHeight: "100vh",
+            }}
+          >
+            {children}
+          </Content>
+        </Layout>
+      </Layout>
+    </AppProvider>
+  );
+}
+
+```
