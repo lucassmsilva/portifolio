@@ -1,7 +1,6 @@
 // components/mdx-components.tsx
 import { LabelImportant } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
-import { ArrowRight, Check } from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
 import type { JSX } from 'react';
 
