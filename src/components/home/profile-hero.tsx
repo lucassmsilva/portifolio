@@ -5,6 +5,7 @@ import { Box, Typography, Container } from '@mui/material';
 import AnimatedText from './animated-text';
 import SkillsSection from './skills-section';
 import ContactInfo from './contact-info';
+import ProjectsSection from './projects';
 
 interface ProfileHeroProps {
   name: string;
@@ -53,6 +54,8 @@ const ProfileHero = ({ name, title, location }: ProfileHeroProps) => {
           </Box>
         </Grid>
       </Grid>
+
+      <ProjectsSection></ProjectsSection>
     </Container>
   );
 };
