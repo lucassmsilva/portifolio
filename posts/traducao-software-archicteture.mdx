@@ -1,0 +1,132 @@
+---
+title: 'Next hydration error MUI || ANTD'
+excerpt: 'Um erro comum na hora de iniciar projetos'
+date: '2025-01-28'
+coverImage: '/images/next.svg'
+---
+
+
+## 🧠 **Boas Práticas em Arquitetura de Software**
+
+Estava lendo o livro Software Architecture in Practice, e resolvi fazer essa tradução desse trecho que achei muito interessante, é bem no começo na introdução, com recomendações para uma boa arquitetura de software
+
+Divididas em duas categorias:
+
+Recomendações de processo:
+Centralização da arquitetura:
+A arquitetura de software (ou sistema) deve ser responsabilidade de um único arquiteto ou de um pequeno grupo liderado por um líder técnico identificado. Isso garante integridade conceitual e consistência técnica. Essa recomendação vale tanto para projetos ágeis e de código aberto quanto para os “tradicionais”. Deve haver uma forte conexão entre os arquitetos e a equipe de desenvolvimento para evitar designs impraticáveis, isolados da realidade ("torre de marfim").
+
+Basear-se em atributos de qualidade prioritários:
+A arquitetura deve ser guiada continuamente por uma lista priorizada de requisitos de atributos de qualidade bem definidos. Esses atributos guiam os trade-offs que inevitavelmente surgem. A funcionalidade é menos importante nesse estágio.
+
+Documentação por visões:
+A arquitetura deve ser documentada usando visões (representações de uma ou mais estruturas arquiteturais). As visões devem abordar as preocupações dos principais stakeholders, considerando o cronograma do projeto. Isso pode significar documentação mínima no início, a ser expandida depois.
+
+Avaliação contínua:
+A arquitetura deve ser avaliada quanto à sua capacidade de satisfazer atributos de qualidade importantes, preferencialmente no início do ciclo de vida, com repetições quando necessário, para garantir que mudanças não a tornaram obsoleta.
+
+Implementação incremental:
+A arquitetura deve permitir implementação incremental, para evitar a integração total de uma só vez (o que raramente funciona) e detectar problemas cedo. Um caminho viável é criar um sistema “esquelético” com caminhos de comunicação testados, ainda que com funcionalidades mínimas, que pode evoluir gradualmente.
+
+Regras estruturais:
+Modularização com ocultação de informações:
+A arquitetura deve ter módulos bem definidos, com responsabilidades funcionais baseadas em ocultação de informações e separação de preocupações. Módulos devem isolar mudanças e ter interfaces claras que escondam suas partes suscetíveis a mudanças.
+
+Uso de padrões reconhecidos:
+Salvo em casos de requisitos inéditos (o que é raro), os atributos de qualidade devem ser alcançados com uso de padrões e táticas arquiteturais já conhecidos.
+
+Evitar dependência de versões específicas de ferramentas comerciais:
+Caso seja inevitável, a arquitetura deve ser estruturada para facilitar e baratear a mudança de versão.
+
+Separar módulos produtores e consumidores de dados:
+Essa separação facilita modificações, pois mudanças tendem a afetar apenas um lado. Caso novos dados sejam introduzidos, ambos os lados podem mudar, mas de forma incremental.
+
+Não esperar correspondência direta entre módulos e componentes:
+Em sistemas concorrentes, múltiplas instâncias de um componente podem rodar em paralelo, a partir do mesmo módulo. Um único thread pode usar serviços de vários componentes oriundos de módulos distintos.
+
+Flexibilidade na alocação de processos:
+Cada processo deve ser escrito para permitir mudança fácil de alocação em processadores, até mesmo em tempo de execução. Isso está alinhado com tendências como virtualização e computação em nuvem.
+
+Padrões simples e consistentes de interação entre componentes:
+O sistema deve realizar as mesmas tarefas da mesma forma em todo lugar, favorecendo a compreensão, reduzindo tempo de desenvolvimento, aumentando a confiabilidade e facilitando modificações.
+
+Controle explícito de contenção de recursos:
+A arquitetura deve identificar claramente áreas de contenção de recursos (como uso de rede ou desempenho) e definir como essas disputas serão resolvidas, com diretrizes e orçamentos específicos a serem seguidos pelas equipes.
+
+## Resumo em Tópicos:
+
+### 🔄 **Recomendações de Processo**
+
+1. **Responsabilidade centralizada:**
+
+   * Um arquiteto ou pequeno grupo liderado define a arquitetura.
+   * Garante integridade conceitual e técnica.
+   * Evita designs “torre de marfim”.
+
+2. **Foco em atributos de qualidade:**
+
+   * Basear decisões em requisitos de qualidade priorizados.
+   * A funcionalidade é secundária nesse momento.
+
+3. **Documentação por visões:**
+
+   * Usar representações específicas para atender stakeholders.
+   * Documentação pode começar mínima e ser expandida conforme necessário.
+
+4. **Avaliação contínua da arquitetura:**
+
+   * Avaliar cedo e regularmente os atributos de qualidade.
+   * Garantir que a arquitetura não fique obsoleta com o tempo.
+
+5. **Implementação incremental:**
+
+   * Começar com um sistema “esquelético” (comunicação testada, pouca funcionalidade).
+   * Permite evolução gradual e identificação precoce de problemas.
+
+---
+
+### 🧱 **Regras Estruturais (Produto)**
+
+1. **Modularização com ocultação de informações:**
+
+   * Módulos isolam mudanças e têm interfaces bem definidas.
+   * Permite equipes trabalharem de forma independente.
+
+2. **Uso de padrões arquiteturais conhecidos:**
+
+   * Táticas e padrões ajudam a alcançar atributos de qualidade.
+   * Evita reinventar soluções.
+
+3. **Independência de ferramentas específicas:**
+
+   * Evitar dependência de versões de produtos comerciais.
+   * Se necessário, facilitar substituição.
+
+4. **Separação entre produtores e consumidores de dados:**
+
+   * Aumenta a capacidade de modificação.
+   * Permite atualizações em etapas.
+
+5. **Desacoplamento entre módulos e componentes:**
+
+   * Componentes podem ter múltiplas instâncias, com base no mesmo módulo.
+   * Threads podem usar componentes diferentes simultaneamente.
+
+6. **Flexibilidade na alocação de processos:**
+
+   * Processos devem poder mudar de processador facilmente.
+   * Suporte a virtualização e nuvem.
+
+7. **Padrões de interação simples e consistentes:**
+
+   * Fazer o sistema agir da mesma forma em todo lugar.
+   * Melhora entendimento, confiabilidade e velocidade de desenvolvimento.
+
+8. **Gestão clara de recursos disputados:**
+
+   * Identificar áreas de contenção (ex: rede, desempenho).
+   * Criar diretrizes e orçamentos para cada equipe.
+
+---
+
+Se quiser, posso converter isso em um **modelo de slide do PowerPoint (PPTX)** ou **PDF pronto para apresentação**. Deseja isso?
